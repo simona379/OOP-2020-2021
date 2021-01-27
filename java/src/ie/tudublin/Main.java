@@ -20,6 +20,8 @@ public class Main
         System.out.println(misty);
         System.out.println(topCat);
 
+        Cat.kill();
+
         // What will get printed out??
 
         // 1. topcat, Garfield
