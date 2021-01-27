@@ -1,6 +1,6 @@
 package ie.tudublin;
 
-public class Cat extends Animal
+/* public class Cat extends Animal
 {
     public Cat(String name, int numLives)
     {
@@ -13,7 +13,7 @@ public class Cat extends Animal
         numLives = 9;
     } */
     
-    private Integer numLives;
+  /*   private Integer numLives;
 
     public static void kill() {
         if (numLives > 0) {
@@ -28,7 +28,7 @@ public class Cat extends Animal
     }
 
     Cat ginger = new Cat("Ginger", 9);
-
+ */ 
    /*  private void Integer(lives)
     {
         this.lives = lives;
@@ -54,4 +54,37 @@ public class Cat extends Animal
         lives = 9;
     } */
 
-}
+
+//SOLUTION
+
+public class Cat extends Animal
+ {
+     private int numLives;
+
+     public Cat(String name)
+     {
+         super(name);
+         numLives = 9;
+     }
+
+     void kill()
+     {
+         if (numLives > 0)
+         {
+             numLives --;
+             System.out.println("Ouch!");
+         }
+         else
+         {
+             System.out.println("I am dead");
+         }
+     }
+
+     public int getNumLives() {
+         return numLives;
+     }
+
+     public void setNumLives(int numLives) {
+         this.numLives = numLives;
+     }
+ } 
