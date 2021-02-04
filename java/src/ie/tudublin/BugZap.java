@@ -108,6 +108,13 @@ public class BugZap extends PApplet {
 			}
 			bugY += 2;
 		}
+	/* 	if (bugX > playerX - halfPlayerWidth && bugX < playerX + halfPlayerWidth)
+			{
+				line(bugX, bugY, bugX, playerY);
+				System.out.println("\n\n\n\n Game Over !!!\n\n\n\n");
+				resetBug();
+			} */
+
 	}
 
 	public void draw() {
