@@ -16,8 +16,8 @@ public class Audio1 extends PApplet {
     float[] lerpedBuffer;
 
     public void settings() {
-        //size(1000, 1000, P3D);
-        fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
+        size(500, 500, P3D);
+        //fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
     }
 
     float y = 200;
@@ -26,9 +26,10 @@ public class Audio1 extends PApplet {
     int which = 0;
 
     public void setup() {
+        surface.setResizable(true);
         minim = new Minim(this);
-        //ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-        ap = minim.loadFile("heroplanet.mp3", width);
+        ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
+        ap = minim.loadFile("103MenuSelect.mp3", width);
         ap.play();
         ab = ap.mix; // Connect the buffer to the mp3 file
         //ab = ai.mix; 
@@ -75,6 +76,8 @@ public class Audio1 extends PApplet {
         average = sum / ab.size();
         // Move lerpedAverage 10% closer to average every frame
         lerpedAverage = lerp(lerpedAverage, average, 0.1f);
+
+         
 
         switch (which)
         {
@@ -196,6 +199,8 @@ public class Audio1 extends PApplet {
                     popMatrix();
                 }
             }
-        }        
+            
+        } 
+           
     }
 }
